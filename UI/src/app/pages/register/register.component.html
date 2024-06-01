@@ -1,6 +1,6 @@
 <form>
     <h3>Register</h3>
-    <input type="email" name="email" id="email" placeholder="Email">
-    <input type="password" name="password" id="password" placeholder="Password">
-    <input type="button" value="Register">
+    <input type="email" name="register_email" id="register_email" placeholder="Email" [(ngModel)]="register.email">
+    <input type="password" name="register_password" id="register_password" placeholder="Password" [(ngModel)]="register.password">
+    <input type="button" value="Register" (click)="onRegister()">
 </form>

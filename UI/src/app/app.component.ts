@@ -5,6 +5,7 @@ import { ApiService } from './services/api-service/api.service';
 import { catchError } from 'rxjs';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { AuthService } from './services/auth-service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import { RegisterComponent } from './pages/register/register.component';
   imports: [RouterOutlet, HttpClientModule, LoginComponent, RegisterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  providers: [ApiService]
+  providers: [ApiService, AuthService]
 })
 
 export class AppComponent implements OnInit{
